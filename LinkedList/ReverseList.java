@@ -1,16 +1,17 @@
 package LinkedList;
 
-class ListNode {
-    int val;
-    ListNode next;
+public class ReverseList {
 
-    ListNode(int val) {
-        this.val = val;
-        this.next = null;
+    static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int val) {
+            this.val = val;
+            this.next = null;
+        }
     }
-}
 
-class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode curr = head;
         ListNode prev = null;
@@ -25,10 +26,8 @@ class Solution {
 
         return prev;
     }
-}
 
-public class ReverseList {
-    public static ListNode createLinkedList(int[] values) {
+    public ListNode createLinkedList(int[] values) {
         if (values.length == 0) return null;
 
         ListNode head = new ListNode(values[0]);
@@ -42,7 +41,7 @@ public class ReverseList {
         return head;
     }
 
-    public static void printLinkedList(ListNode head) {
+    public void printLinkedList(ListNode head) {
         ListNode current = head;
         while (current != null) {
             System.out.print(current.val + " ");
@@ -52,16 +51,16 @@ public class ReverseList {
     }
 
     public static void main(String[] args) {
+        ReverseList reverseList = new ReverseList();
         int[] values = {1, 2, 3, 4, 5};
-        ListNode head = createLinkedList(values);
+        ListNode head = reverseList.createLinkedList(values);
 
         System.out.println("Original List:");
-        printLinkedList(head);
+        reverseList.printLinkedList(head);
 
-        Solution solution = new Solution();
-        ListNode reversedHead = solution.reverseList(head);
+        ListNode reversedHead = reverseList.reverseList(head);
 
         System.out.println("Reversed List:");
-        printLinkedList(reversedHead);
+        reverseList.printLinkedList(reversedHead);
     }
 }
