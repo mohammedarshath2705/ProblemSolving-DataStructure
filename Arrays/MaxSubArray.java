@@ -1,5 +1,7 @@
 package Arrays;
-
+/*
+Given an integer array arr, find the maximum sum of a contiguous subarray.
+ */
 public class MaxSubArray {
     public int maxSubArray(int[] nums) {
         if (nums == null || nums.length == 0)
