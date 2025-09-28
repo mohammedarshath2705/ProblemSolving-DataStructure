@@ -1,5 +1,7 @@
 package Arrays;
-
+/*
+Kth Smallest/Large using Heap - Find kth smallest (or largest) element efficiently.
+ */
 import java.util.Collections;
 import java.util.PriorityQueue;
 
