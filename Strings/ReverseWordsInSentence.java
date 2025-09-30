@@ -32,8 +32,8 @@ public class ReverseWordsInSentence {
     }
 
     public static void main(String[] args) {
-        System.out.println(reverseWords("I love Java"));   // Java love I
-        System.out.println(reverseWords("Hello World"));   // World Hello
-        System.out.println(reverseWords("One two three")); // three two One
+        System.out.println(reverseWords("I love Java"));
+        System.out.println(reverseWords("Hello World"));
+        System.out.println(reverseWords("One two three"));
     }
 }
