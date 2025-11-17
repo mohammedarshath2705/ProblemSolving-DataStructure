@@ -15,7 +15,13 @@ public class SortedAlp {
                         .filter(n->n.startsWith("A"))
                 .toList();
 
+        List<String> upper = names.stream()
+                .map(String::toUpperCase)
+                .toList();
+
+
         System.out.println("First 3 Sorted Names: " + firstThree);
         System.out.println("Names starts with A: " + result);
+        System.out.println("To Uppercase: " + upper);
     }
 }
