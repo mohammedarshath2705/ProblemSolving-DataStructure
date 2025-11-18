@@ -1,6 +1,7 @@
 package Streams;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class SortedAlp {
     public static void main(String[] args) {
@@ -19,9 +20,16 @@ public class SortedAlp {
                 .map(String::toUpperCase)
                 .toList();
 
+        Map<Character, Long> freq =
+                "zara".chars()
+                        .mapToObj(c -> (char)c)
+                        .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
+
+
 
         System.out.println("First 3 Sorted Names: " + firstThree);
         System.out.println("Names starts with A: " + result);
         System.out.println("To Uppercase: " + upper);
+        System.out.println("Frequency of characters in a string: " + freq);
     }
 }
