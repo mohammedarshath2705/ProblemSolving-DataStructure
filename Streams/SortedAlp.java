@@ -25,11 +25,15 @@ public class SortedAlp {
                         .mapToObj(c -> (char)c)
                         .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
 
+        List<String> result2 = names.stream()
+                .sorted(Comparator.reverseOrder())
+                .toList();
 
 
         System.out.println("First 3 Sorted Names: " + firstThree);
         System.out.println("Names starts with A: " + result);
         System.out.println("To Uppercase: " + upper);
         System.out.println("Frequency of characters in a string: " + freq);
+        System.out.println("Reverse Order : " +result2);
     }
 }
