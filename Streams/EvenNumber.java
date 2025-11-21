@@ -1,6 +1,7 @@
 package Streams;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class EvenNumber {
@@ -10,7 +11,13 @@ public class EvenNumber {
         List<Integer> even = numbers.stream()
                 .filter(n -> n % 2 == 0)
                 .toList();
+        int secondHighest = numbers.stream()
+                .sorted(Comparator.reverseOrder())
+                .skip(1)
+                .findFirst()
+                .orElse(-1);
 
         System.out.println("Even Numbers: " + even);
+        System.out.println("Second Highest Number : " + secondHighest);
     }
 }
