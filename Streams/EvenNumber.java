@@ -6,7 +6,7 @@ import java.util.List;
 
 public class EvenNumber {
     public static void main(String[] args) {
-        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,-100,8,9,10,200,75,125);
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,-100,8,9,10,200,75,125,1,2,3,4,5);
 
         List<Integer> even = numbers.stream()
                 .filter(n -> n % 2 == 0)
@@ -25,12 +25,18 @@ public class EvenNumber {
                 .filter(n -> n > 50)
                 .count();
 
+        List<Integer> unique = numbers.stream()
+                .distinct()
+                .toList();
+
+
 
 
         System.out.println("Even Numbers: " + even);
         System.out.println("Second Highest Number : " + secondHighest);
         System.out.println("Minimum Number : " + min);
         System.out.println("Count of Number greater than 50 : " + count);
+        System.out.println("After Removing Duplicate : " + unique);
 
     }
 }
